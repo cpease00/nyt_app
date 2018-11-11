@@ -1,7 +1,7 @@
 # Comparing and Visualizing New York Times coverage of Presidents Obama and Trump
 
 # Project Motivation: 
-In this project, we used the article search API provided by the New York Times to pull data for articles related to Presidents Obama and Trump. A relational SQL database was created to store article data, spanning equivalent two-year periods during each presidency. We hope you find the visualization of the data insightful. 
+In this project, we used the article search API provided by the New York Times to pull data for articles related to Presidents Obama and Trump. A relational SQL database was created to store article data, spanning equivalent two-year periods during each presidency. The visualizations were displayed using a Dash app, Plotly's interactive dashboard library.
 
 # ETL
 The New York Times API provided many data points for each article, and the following were chosen for our analysis:
