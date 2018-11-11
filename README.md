@@ -1,10 +1,10 @@
 # Comparing and Visualizing New York Times coverage of Presidents Obama and Trump
 
 # Project Motivation: 
-In this project, we used the article search API provided by the New York Times to pull data for articles related to Presidents Obama and Trump. We hope you find the visualization of the data insightful. 
+In this project, we used the article search API provided by the New York Times to pull data for articles related to Presidents Obama and Trump. A relational SQL database was created to store article data, spanning equivalent two-year periods during each presidency. We hope you find the visualization of the data insightful. 
 
 # ETL
-The New York Times API provided specific keys on article search. The main keys that this project focuses on are: 
+The New York Times API provided many data points for each article, and the following were chosen for our analysis:
 * Keywords
 * Section
 * Date
@@ -13,7 +13,7 @@ The New York Times API provided specific keys on article search. The main keys t
 For each of the presidents, we queried a two year period starting from 6 months before office to 18 months post-inauguration. This range allowed us to compare the news coverage for the presidents during similar timeframes. Our queries yielded 6000 articles in total.
 
 # SQL Database Schema
-we used SQLAlchemy to construct the schema for the SQL database.
+The ORM SQLAlchemy was used to construct the schema for the SQL database. The entities in our database were presidents, articles and keywords, with one to many and many to many relationships respectively.
 
 # Overview of the NYT presidential coverage article count 
 <p align="center">
@@ -39,8 +39,9 @@ These interactive visualizations showed the most popular keywords for each of th
   <img src="keywords_obama.png" title="Obama keywords">
   <img src="keywords_trump.png" title="Obama keywords">
 </p>
+The most interesting result is the contrast between the top keywords for each president. Undoubtedly these will be shifted slightly as President Trump's term progresses. A possible explanation for the difference is a change in the way that NYT writers attribute different keywords to the article as there is likely not a concrete procedure for assigning these tags.
 
 # Next steps: 
-* explore different news sources and their coverage of the two presidents, and how the different agency with different viewpoints differ in how they cover the presidents. 
+* explore different news sources and their coverage of the two presidents, to see how media institutions with different viewpoints differ in how they cover the presidents. 
 * expand the news source to include Twitter, which is a less filtered and unedited view of the general public's sentiment on presidential news coverage. 
-* Leverage natural language processing to gauge the sentiment score of the newspaper coverage on the presidents by headlines, or by the actual content of the article, and be able to compare our findings on their sentiment scores. 
+* Leverage natural language processing to gauge the sentiment of the newspaper coverage on the presidents by headlines, or by the actual content of the article. 
